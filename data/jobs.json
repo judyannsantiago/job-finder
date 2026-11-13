@@ -1,11 +1,241 @@
 {
-  "sample": true,
-  "generated_at": null,
-  "jobs": [
-    {"id":"s1","title":"Virtual Assistant (SAMPLE)","company":"Sample Company A","category":"Administrative Support","source":"Sample","hours_ago":5,"date_type":"published","remote":"confirmed","eligible_location":"Philippines","languages":"English","salary":"$900-1,200/mo","salary_max":1200,"type":"Full-time","score":92,"verification":"confirmed","summary":"Sample listing to preview the layout. Real jobs appear after Stage 2.","responsibilities":["Manage inbox and calendar","Data entry and documentation"],"qualifications":["Admin experience","Google Workspace"],"url":"https://example.com/sample-1"},
-    {"id":"s2","title":"Scheduling Coordinator (SAMPLE)","company":"Sample Company B","category":"Scheduling and Coordination","source":"Sample","hours_ago":30,"date_type":"published","remote":"confirmed","eligible_location":"Worldwide (PH eligible)","languages":"English","salary":null,"salary_max":0,"type":"Full-time","score":85,"verification":"confirmed","summary":"Sample listing: schedule technicians and track work orders.","responsibilities":["Schedule service appointments","Track work orders"],"qualifications":["Ticketing or CRM tools","Clear communication"],"url":"https://example.com/sample-2"},
-    {"id":"s3","title":"Vendor Support Specialist (SAMPLE)","company":"Sample Company C","category":"Vendor and Account Support","source":"Sample","hours_ago":100,"date_type":"published","remote":"confirmed","eligible_location":"Philippines","languages":"English, Filipino","salary":"$1,000/mo","salary_max":1000,"type":"Contract","score":78,"verification":"confirmed","summary":"Sample listing: vendor onboarding and document checks.","responsibilities":["Onboard vendors","Verify vendor documents"],"qualifications":["Vendor or procurement exposure"],"url":"https://example.com/sample-3"},
-    {"id":"s4","title":"Operations Assistant (SAMPLE)","company":"Sample Company D","category":"Operations Support","source":"Sample","hours_ago":50,"date_type":"updated","remote":"needs","eligible_location":"Not stated","languages":"English","salary":null,"salary_max":0,"type":"Full-time","score":74,"verification":"needs","summary":"Sample listing with missing details, so it shows under Needs Verification.","responsibilities":["Back-office support"],"qualifications":["Not stated"],"url":"https://example.com/sample-4"},
-    {"id":"s5","title":"Customer Support Representative (SAMPLE)","company":"Sample Company E","category":"Customer Service and Support","source":"Sample","hours_ago":12,"date_type":"published","remote":"confirmed","eligible_location":"Philippines","languages":"English","salary":"$800-1,000/mo","salary_max":1000,"type":"Full-time","score":88,"verification":"confirmed","summary":"Sample listing: help customers by email and chat and handle billing questions.","responsibilities":["Answer customer emails and chats","Handle billing and refund requests"],"qualifications":["Customer support experience","Zendesk or similar tool"],"url":"https://example.com/sample-5"}
-  ]
+ "sample": false,
+ "generated_at": "2026-11-13T06:17:27.035Z",
+ "new_ids": [
+  "662ed0a794",
+  "67d7e51c64",
+  "e50563d66d",
+  "2aeba73167",
+  "b10bf2a6c8",
+  "81cb5245b3",
+  "919f962234"
+ ],
+ "sources": {
+  "remotive": {
+   "ok": true,
+   "fetched": 56
+  },
+  "wwr": {
+   "ok": true,
+   "fetched": 100
+  },
+  "remoteok": {
+   "ok": true,
+   "fetched": 98
+  },
+  "greenhouse": {
+   "ok": true,
+   "fetched": 0
+  },
+  "lever": {
+   "ok": true,
+   "fetched": 0
+  }
+ },
+ "jobs": [
+  {
+   "id": "662ed0a794",
+   "title": "Part-Time Data Entry Specialist",
+   "company": "APADCode",
+   "category": "Administrative Support",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-11T17:01:04.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Asia Only",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 82,
+   "verification": "confirmed",
+   "summary": "Headquarters: Bangalore, Karnataka, India URL: https://apadcode.com About APADCode APADCode is a technology and business solutions company providing software development, data management, and operational support services to businesses. We are looking for reliable, detail-oriented individuals to join…",
+   "responsibilities": [
+    "Enter, update, and maintain information in spreadsheets, databases, and internal systems.",
+    "Review and verify data for accuracy and completeness.",
+    "Organize digital documents, records, and files.",
+    "Perform basic online research and information collection."
+   ],
+   "qualifications": [
+    "English Proficiency: Upper-intermediate (B2) level or higher, with good written and verbal communication skills.",
+    "Computer Skills: Basic proficiency in using computers, web browsers, email, and spreadsheets.",
+    "Internet Connection: Reliable, stable internet connection suitable for remote work.",
+    "Equipment: Access to a personal laptop or desktop computer."
+   ],
+   "url": "https://weworkremotely.com/remote-jobs/apadcode-part-time-data-entry-specialist",
+   "first_seen": "2026-11-13T06:17:27.035Z"
+  },
+  {
+   "id": "67d7e51c64",
+   "title": "Bookkeeper &amp; Admin Support Specialist - Dayshift Remote",
+   "company": "D2B",
+   "category": "Customer Service and Support",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-11T17:00:39.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Philippines",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 82,
+   "verification": "confirmed",
+   "summary": "Headquarters: Manila, Metro Manila, Philippines URL: https://jobs.workable.com/company/dcaVtKQqXr9FwBNppNCBH9/jobs-at-d2b Position: Bookkeeper & Admin Support Specialist Salary: Php 60,000 - Php 75,000/month Working Hours & Conditions: AU Working Hours and Holidays Employment: Full Time - Independen…",
+   "responsibilities": [
+    "Core Bookkeeping",
+    "Perform regular bank reconciliations across all three business entities.",
+    "Manage invoicing, accounts receivable, accounts payable, and statement reconciliations.",
+    "Process payroll accurately, efficiently, and on time."
+   ],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/d2b-bookkeeper-admin-support-specialist-dayshift-remote",
+   "first_seen": "2026-11-13T06:17:27.035Z"
+  },
+  {
+   "id": "e50563d66d",
+   "title": "E-commerce &amp; Operations Coordinator (Pharma/Supplements) - NZ",
+   "company": "D2B",
+   "category": "Operations Support",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-11T17:00:34.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Philippines",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 100,
+   "verification": "confirmed",
+   "summary": "Headquarters: Manila, Metro Manila, Philippines URL: https://jobs.workable.com/company/dcaVtKQqXr9FwBNppNCBH9/jobs-at-d2b About the CompanyThe client is a New Zealand-based wellness brand specialising in nutritional supplements and wellness products. The company is committed to developing high-quali…",
+   "responsibilities": [
+    "Manage customer enquiries across email, live chat, helpdesk, website, and social media channels.",
+    "Oversee online order processing, tracking, amendments, cancellations, refunds, returns, and subscription changes.",
+    "Coordinate with couriers and third-party logistics (3PL) providers to resolve delivery issues and fulfilment discrepancies.",
+    "Monitor customer feedback, identify recurring issues, and prepare monthly customer insights reports."
+   ],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/d2b-e-commerce-operations-coordinator-pharma-supplements-nz",
+   "first_seen": "2026-11-13T06:17:27.035Z"
+  },
+  {
+   "id": "2aeba73167",
+   "title": "HIL Support Specialist",
+   "company": "Extend Your Team",
+   "category": "Customer Service and Support",
+   "source": "Remote OK",
+   "published_at": "2026-11-09T16:00:20.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Philippines",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": null,
+   "score": 100,
+   "verification": "confirmed",
+   "summary": "WHY JOIN EYT? Â Monthly Rate: Php80,000 - Php100,000 +$1,000 Sign-On Bonus â Start in November or December 2026! Â New hires whose contractor start date falls within November or December 2026 are eligible for a $1,000 USD sign-on bonus. The bonus is paid in two installments at the 2-month and 4-mo…",
+   "responsibilities": [
+    "Handle inbound and outbound HIL customer interactions through phone, Zendesk, SMS, Calendly, and other approved support channels.",
+    "Complete HIL Welcome Calls with newly approved customers and ensure required verification, disclosures, and customer understanding are completed before moving t",
+    "Assist customers with questions regarding their application, approval status, account terms, payments, AutoPay, available credit, account status, and other HIL-",
+    "Support contractors and HIL partners with application-status questions, customer follow-ups, documentation needs, and operational requests."
+   ],
+   "qualifications": [
+    "At least 2 years of experience in customer service, financial services, lending, mortgage, fintech, banking, or a similar operations environment.",
+    "Strong experience handling customers through phone, email, chat, or ticketing systems.",
+    "Experience working with external partners, merchants, contractors, vendors, or other third parties is highly preferred.",
+    "Experience supporting US-based customers is strongly preferred."
+   ],
+   "url": "https://remoteOK.com/remote-jobs/remote-hil-support-specialist-extend-your-team-1137711",
+   "first_seen": "2026-11-13T06:17:27.035Z"
+  },
+  {
+   "id": "b10bf2a6c8",
+   "title": "Entry Level Scheduling &amp; Coordinating Reservations Online",
+   "company": "Destination Careers",
+   "category": "Scheduling and Coordination",
+   "source": "Remote OK",
+   "published_at": "2026-11-04T00:00:06.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Not stated",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": null,
+   "score": 73,
+   "verification": "needs",
+   "summary": "About Us: We are a client coordination and services company that supports individuals and organizations with scheduling, reservations, and service-related logistics. We focus on clear communication, organized workflows, and delivering a consistent, high-quality client experience. Position Overview: …",
+   "responsibilities": [
+    "Coordinate scheduling and reservation requests following established processes",
+    "Communicate with clients to confirm details, provide updates, and address general inquiries",
+    "Maintain accurate records, calendars, and reservation documentation",
+    "Monitor timelines and ensure confirmations, updates, and changes are completed accurately"
+   ],
+   "qualifications": [
+    "Strong organizational and time-management skills",
+    "Clear written and verbal communication abilities",
+    "Attention to detail and accuracy",
+    "Ability to work independently in a remote environment"
+   ],
+   "url": "https://remoteOK.com/remote-jobs/remote-entry-level-scheduling-amp-coordinating-reservations-online-destination-careers-1137680",
+   "first_seen": "2026-11-13T06:17:27.035Z"
+  },
+  {
+   "id": "81cb5245b3",
+   "title": "Travel Support Specialist",
+   "company": "Aisles &amp; Abroad",
+   "category": "Customer Service and Support",
+   "source": "Remote OK",
+   "published_at": "2026-10-23T00:00:05.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Not stated",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": null,
+   "score": 77,
+   "verification": "needs",
+   "summary": "Position Overview We are seeking dependable and customer-focused individuals to join our team as a Travel Support Specialist. This remote role focuses on assisting clients with travel-related inquiries, supporting reservation coordination, and ensuring a smooth and positive customer experience throu…",
+   "responsibilities": [
+    "Respond to client inquiries regarding travel options, reservations, and itinerary details",
+    "Assist with coordinating and confirming bookings for hotels, cruises, and vacation packages",
+    "Review travel information for accuracy, including dates, traveler details, and accommodations",
+    "Provide timely updates and clear communication before and after travel"
+   ],
+   "qualifications": [
+    "Strong written and verbal communication skills",
+    "Customer-focused mindset with attention to detail",
+    "Comfortable using online systems and digital platforms",
+    "Ability to work independently in a remote environment"
+   ],
+   "url": "https://remoteOK.com/remote-jobs/remote-travel-support-specialist-aisles-amp-abroad-1137559",
+   "first_seen": "2026-11-13T06:17:27.035Z"
+  },
+  {
+   "id": "919f962234",
+   "title": "Customer Success Associate",
+   "company": "Voltus",
+   "category": "Customer Service and Support",
+   "source": "Remote OK",
+   "published_at": "2026-10-16T00:00:43.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Not stated",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": null,
+   "score": 74,
+   "verification": "needs",
+   "summary": "Voltus represents the potential of us to better manage energy through simple, cost and risk-free demand response programs. Our commercial and industrial customers earn cash by letting us maximize the value of their operational flexibility in energy markets. We hire people who are bright, gritty, and…",
+   "responsibilities": [],
+   "qualifications": [],
+   "url": "https://remoteOK.com/remote-jobs/remote-customer-success-associate-voltus-1137529",
+   "first_seen": "2026-11-13T06:17:27.035Z"
+  }
+ ]
 }
