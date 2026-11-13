@@ -1,1 +1,142 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Job Finder</title>
+<style>
+:root{--bg:#fff;--ink:#4a4a4a;--mute:#8a8a8a;--acc:#C7A97A;--accd:#9c7f52;--line:#e9e3d9;--tint:#faf7f2}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:600;color:#3a3a3a;margin:0}
+header{padding:28px 20px 8px;max-width:1100px;margin:auto}h1{font-size:30px}header p{color:var(--mute);margin:4px 0 0}
+main{max-width:1100px;margin:auto;padding:12px 20px 60px}
+.banner{background:var(--tint);border:1px solid var(--acc);border-radius:6px;padding:10px 14px;margin:12px 0;font-size:14px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:14px 0}
+.stat{border:1px solid var(--line);border-radius:6px;padding:12px 14px;background:#fff}.stat b{display:block;font:600 26px Georgia,serif;color:var(--accd)}.stat span{color:var(--mute);font-size:13px}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin:18px 0 12px;flex-wrap:wrap}
+.tabs button{background:none;border:0;padding:9px 14px;font:inherit;color:var(--mute);cursor:pointer;border-bottom:2px solid transparent}
+.tabs button[aria-selected=true]{color:#3a3a3a;border-color:var(--acc)}
+.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-bottom:14px}
+input,select,textarea{font:inherit;color:var(--ink);border:1px solid var(--line);border-radius:5px;padding:7px 9px;background:#fff;width:100%}
+label{font-size:12px;color:var(--mute);display:block;margin-bottom:2px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.job{border:1px solid var(--line);border-radius:6px;padding:16px;margin-bottom:12px}
+.top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.job h3{font-size:19px}.co{color:var(--mute)}
+.score{text-align:center;min-width:64px;border:1px solid var(--acc);border-radius:6px;padding:4px 8px}.score b{font:600 20px Georgia,serif;color:var(--accd);display:block}.score span{font-size:11px;color:var(--mute)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 14px;margin:10px 0;font-size:13px;color:var(--mute)}
+.badge{background:var(--acc);color:#fff;border-radius:4px;padding:1px 8px;font-size:12px;font-weight:600}
+.badge.w{background:#fff;color:var(--accd);border:1px solid var(--acc)}
+ul{margin:4px 0 8px 18px;padding:0}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{display:inline-block;border:1px solid var(--acc);background:var(--acc);color:#fff;border-radius:5px;padding:7px 14px;font:inherit;text-decoration:none;cursor:pointer}
+.btn.o{background:#fff;color:var(--accd)}
+details{margin-top:10px;border-top:1px solid var(--line);padding-top:8px}summary{cursor:pointer;color:var(--accd)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px;margin-top:8px}
+.empty{padding:30px;text-align:center;color:var(--mute);border:1px dashed var(--line);border-radius:6px}
+@media(max-width:520px){.top{flex-direction:column-reverse}}
+</style></head><body>
+<header><h1>Job Finder</h1><p>Fully remote roles open to applicants in the Philippines.</p></header>
+<main>
+<div id="banner"></div>
+<section class="cards" id="stats" aria-label="Summary"></section>
+<div class="tabs" role="tablist" id="tabs"></div>
+<section class="filters" id="filters"></section>
+<div id="list"></div>
+<div class="row"><button class="btn o" id="exp">Export my tracking</button>
+<label class="btn o" style="margin:0">Import tracking<input type="file" id="imp" accept=".json" hidden></label></div>
+</main>
+<script>
+const STATUSES=["Interested","For Review","Ready to Apply","Applied","Interview","Assessment","Offer","Rejected","Not Suitable"];
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safeUrl=u=>/^https?:\/\//i.test(u||'')?u:'#';
+let jobs=[],meta={},tab='confirmed',f={date:'168',q:'',cat:'',src:'',min:'70',type:'',sort:'new',from:'',to:''};
+let track={};try{track=JSON.parse(localStorage.getItem('jf_track')||'{}')}catch(e){}
+const save=()=>{try{localStorage.setItem('jf_track',JSON.stringify(track))}catch(e){}};
+const now=Date.now();
+const tm=j=>j.published_at?new Date(j.published_at).getTime():(j.hours_ago!=null?now-j.hours_ago*36e5:null);
+const hrs=j=>{const t=tm(j);return t==null?null:(now-t)/36e5};
+const ago=h=>h==null?'Date unverified':h<1?'Just now':h<24?Math.floor(h)+'h ago':Math.floor(h/24)+'d ago';
+const T=id=>track[id]||(track[id]={});
+const isSaved=id=>!!(track[id]&&(track[id].saved||track[id].status));
 
+function loadJobs(){
+  fetch('data/jobs.json?'+Date.now()).then(r=>r.json()).then(d=>{meta=d;jobs=d.jobs||[];init()})
+  .catch(()=>{$('#list').innerHTML='<div class="empty">Could not load data/jobs.json. Check that the file is in the repo.</div>'});
+}
+function init(){
+  $('#banner').innerHTML=meta.sample?'<div class="banner"><b>Sample data.</b> These listings are placeholders to preview the layout. Real jobs arrive in Stage 2.</div>':
+   (meta.generated_at?'<div class="banner">Last updated '+esc(new Date(meta.generated_at).toLocaleString())+'</div>':'');
+  const cats=[...new Set(jobs.map(j=>j.category))].sort(),srcs=[...new Set(jobs.map(j=>j.source))].sort(),types=[...new Set(jobs.map(j=>j.type).filter(Boolean))].sort();
+  const opt=(a,l)=>'<option value="">'+l+'</option>'+a.map(x=>'<option>'+esc(x)+'</option>').join('');
+  $('#filters').innerHTML=`
+  <div><label for="fq">Search title or company</label><input id="fq"></div>
+  <div><label for="fd">Date posted</label><select id="fd"><option value="24">Last 24 hours</option><option value="72">Last 3 days</option><option value="168" selected>Last 7 days</option><option value="c">Custom range</option></select></div>
+  <div id="cr" hidden><label>From</label><input type="date" id="ff"><label>To</label><input type="date" id="ft"></div>
+  <div><label for="fc">Category</label><select id="fc">${opt(cats,'All categories')}</select></div>
+  <div><label for="fs">Source</label><select id="fs">${opt(srcs,'All sources')}</select></div>
+  <div><label for="ft2">Employment type</label><select id="ft2">${opt(types,'Any type')}</select></div>
+  <div><label for="fm">Minimum match</label><select id="fm"><option value="70">70% and up</option><option value="80">80% and up</option><option value="90">90% and up</option></select></div>
+  <div><label for="fo">Sort by</label><select id="fo"><option value="new">Newest first</option><option value="score">Highest match</option><option value="sal">Salary</option></select></div>`;
+  const bind=(id,k)=>$(id).addEventListener('input',e=>{f[k]=e.target.value;if(k==='date')$('#cr').hidden=e.target.value!=='c';render()});
+  bind('#fq','q');bind('#fd','date');bind('#ff','from');bind('#ft','to');bind('#fc','cat');bind('#fs','src');bind('#ft2','type');bind('#fm','min');bind('#fo','sort');
+  render();
+}
+function inRange(j){
+  const h=hrs(j);if(h==null)return false;
+  if(f.date==='c'){const t=tm(j);return(!f.from||t>=new Date(f.from).getTime())&&(!f.to||t<=new Date(f.to).getTime()+864e5)}
+  return h<=+f.date;
+}
+function pass(j){
+  if(f.q&&!(j.title+' '+j.company).toLowerCase().includes(f.q.toLowerCase()))return false;
+  if(f.cat&&j.category!==f.cat)return false;if(f.src&&j.source!==f.src)return false;if(f.type&&j.type!==f.type)return false;
+  return (j.score||0)>=+f.min;
+}
+function counts(){
+  const conf=jobs.filter(j=>j.verification==='confirmed'&&(j.score||0)>=70);
+  const w=x=>conf.filter(j=>{const h=hrs(j);return h!=null&&h<=x}).length;
+  const st=[['New (24 hours)',w(24)],['Within 3 days',w(72)],['Within 7 days',w(168)],['Excellent matches',conf.filter(j=>j.score>=90&&hrs(j)<=168).length],
+   ['Saved',jobs.filter(j=>isSaved(j.id)).length],['Applied',jobs.filter(j=>(track[j.id]||{}).status==='Applied').length]];
+  $('#stats').innerHTML=st.map(s=>`<div class="stat"><b>${s[1]}</b><span>${s[0]}</span></div>`).join('');
+  const tabs=[['confirmed','Confirmed matches'],['needs','Needs verification'],['saved','Saved'],['applied','Applied']];
+  $('#tabs').innerHTML=tabs.map(t=>`<button role="tab" aria-selected="${tab===t[0]}" data-t="${t[0]}">${t[1]}</button>`).join('');
+  document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{tab=b.dataset.t;render()});
+}
+function render(){
+  counts();
+  let L=jobs.filter(j=>{
+    if(tab==='saved')return isSaved(j.id);
+    if(tab==='applied')return (track[j.id]||{}).status==='Applied';
+    if(!pass(j))return false;
+    if(tab==='needs')return j.verification!=='confirmed'&&hrs(j)!=null?inRange(j):j.verification!=='confirmed';
+    return j.verification==='confirmed'&&inRange(j);
+  });
+  const s=f.sort;L.sort((a,b)=>s==='score'?b.score-a.score:s==='sal'?(b.salary_max||0)-(a.salary_max||0):(tm(b)||0)-(tm(a)||0));
+  $('#list').innerHTML=L.length?L.map(card).join(''):'<div class="empty">No jobs here yet. Try a wider date range or a lower match score.</div>';
+  document.querySelectorAll('[data-save]').forEach(b=>b.onclick=()=>{const t=T(b.dataset.save);t.saved=!t.saved;save();render()});
+  document.querySelectorAll('[data-f]').forEach(el=>el.addEventListener('change',()=>{const[id,k]=el.dataset.f.split('|');T(id)[k]=el.value;save();counts()}));
+}
+function band(s){return s>=90?'Excellent match':s>=80?'Strong match':'Potential match'}
+function card(j){
+  const h=hrs(j),t=track[j.id]||{},li=a=>'<ul>'+(a||[]).map(x=>'<li>'+esc(x)+'</li>').join('')+'</ul>';
+  const fld=(k,l,type)=>`<div><label>${l}</label><input type="${type}" data-f="${esc(j.id)}|${k}" value="${esc(t[k]||'')}"></div>`;
+  const dateLbl=j.date_type==='updated'?'Updated '+ago(h):h==null?'Date unverified':'Posted '+ago(h);
+  return `<article class="job"><div class="top"><div>
+   <h3>${esc(j.title)}</h3><div class="co">${esc(j.company)} &middot; ${esc(j.category)}</div></div>
+   <div class="score"><b>${j.score||0}%</b><span>${band(j.score||0)}</span></div></div>
+   <div class="meta">${h!=null&&h<=24?'<span class="badge">New: under 24h</span>':''}
+    ${j.verification!=='confirmed'?'<span class="badge w">Needs verification</span>':''}
+    <span>${esc(dateLbl)}</span><span>Source: ${esc(j.source)}</span><span>${j.remote==='confirmed'?'Fully remote':'Remote status unverified'}</span>
+    <span>Eligible: ${esc(j.eligible_location)}</span><span>Languages: ${esc(j.languages)}</span>
+    ${j.salary?'<span>'+esc(j.salary)+'</span>':''}${j.type?'<span>'+esc(j.type)+'</span>':''}</div>
+   <p>${esc(j.summary)}</p>
+   <details><summary>Responsibilities and qualifications</summary><b>Responsibilities</b>${li(j.responsibilities)}<b>Qualifications</b>${li(j.qualifications)}</details>
+   <details><summary>My tracking</summary><div class="grid2">
+    <div><label>Status</label><select data-f="${esc(j.id)}|status"><option value="">Not set</option>${STATUSES.map(s=>`<option${t.status===s?' selected':''}>${s}</option>`).join('')}</select></div>
+    ${fld('applied','Application date','date')}${fld('interview','Interview date','date')}${fld('followup','Follow-up date','date')}${fld('contact','Company contact','text')}</div>
+    <label style="margin-top:8px">Notes</label><textarea rows="3" data-f="${esc(j.id)}|notes">${esc(t.notes||'')}</textarea></details>
+   <div class="row"><a class="btn" href="${esc(safeUrl(j.url))}" target="_blank" rel="noopener noreferrer">Open application page</a>
+    <button class="btn o" data-save="${esc(j.id)}">${t.saved?'Unsave':'Save job'}</button></div></article>`;
+}
+$('#exp').onclick=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(track,null,2)],{type:'application/json'}));a.download='job-tracking.json';a.click()};
+$('#imp').onchange=e=>{const r=new FileReader();r.onload=()=>{try{track=JSON.parse(r.result);save();render()}catch(x){alert('That file is not valid tracking data.')}};if(e.target.files[0])r.readAsText(e.target.files[0])};
+loadJobs();
+</script></body></html>
