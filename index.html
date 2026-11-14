@@ -48,7 +48,7 @@ const STATUSES=["Interested","For Review","Ready to Apply","Applied","Interview"
 const $=s=>document.querySelector(s);
 const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeUrl=u=>/^https?:\/\//i.test(u||'')?u:'#';
-let jobs=[],meta={},tab='confirmed',f={date:'168',q:'',cat:'',src:'',min:'70',type:'',sort:'new',from:'',to:''};
+let jobs=[],meta={},tab='confirmed',f={date:'168',q:'',cat:'',niche:'',src:'',min:'70',type:'',sort:'new',from:'',to:''};
 let track={};try{track=JSON.parse(localStorage.getItem('jf_track')||'{}')}catch(e){}
 const save=()=>{try{localStorage.setItem('jf_track',JSON.stringify(track))}catch(e){}};
 const now=Date.now();
@@ -65,19 +65,20 @@ function loadJobs(){
 function init(){
   $('#banner').innerHTML=meta.sample?'<div class="banner"><b>Sample data.</b> These listings are placeholders to preview the layout. Real jobs arrive in Stage 2.</div>':
    (meta.generated_at?'<div class="banner">Last updated '+esc(new Date(meta.generated_at).toLocaleString())+'</div>':'');
-  const cats=[...new Set(jobs.map(j=>j.category))].sort(),srcs=[...new Set(jobs.map(j=>j.source))].sort(),types=[...new Set(jobs.map(j=>j.type).filter(Boolean))].sort();
+  const niches=[...new Set(jobs.map(j=>j.niche).filter(Boolean))].sort(),cats=[...new Set(jobs.map(j=>j.category))].sort(),srcs=[...new Set(jobs.map(j=>j.source))].sort(),types=[...new Set(jobs.map(j=>j.type).filter(Boolean))].sort();
   const opt=(a,l)=>'<option value="">'+l+'</option>'+a.map(x=>'<option>'+esc(x)+'</option>').join('');
   $('#filters').innerHTML=`
   <div><label for="fq">Search title or company</label><input id="fq"></div>
   <div><label for="fd">Date posted</label><select id="fd"><option value="24">Last 24 hours</option><option value="72">Last 3 days</option><option value="168" selected>Last 7 days</option><option value="c">Custom range</option></select></div>
   <div id="cr" hidden><label>From</label><input type="date" id="ff"><label>To</label><input type="date" id="ft"></div>
   <div><label for="fc">Category</label><select id="fc">${opt(cats,'All categories')}</select></div>
+  <div><label for="fn">Niche</label><select id="fn">${opt(niches,'All niches')}</select></div>
   <div><label for="fs">Source</label><select id="fs">${opt(srcs,'All sources')}</select></div>
   <div><label for="ft2">Employment type</label><select id="ft2">${opt(types,'Any type')}</select></div>
   <div><label for="fm">Minimum match</label><select id="fm"><option value="70">70% and up</option><option value="80">80% and up</option><option value="90">90% and up</option></select></div>
   <div><label for="fo">Sort by</label><select id="fo"><option value="new">Newest first</option><option value="score">Highest match</option><option value="sal">Salary</option></select></div>`;
   const bind=(id,k)=>$(id).addEventListener('input',e=>{f[k]=e.target.value;if(k==='date')$('#cr').hidden=e.target.value!=='c';render()});
-  bind('#fq','q');bind('#fd','date');bind('#ff','from');bind('#ft','to');bind('#fc','cat');bind('#fs','src');bind('#ft2','type');bind('#fm','min');bind('#fo','sort');
+  bind('#fq','q');bind('#fd','date');bind('#ff','from');bind('#ft','to');bind('#fc','cat');bind('#fn','niche');bind('#fs','src');bind('#ft2','type');bind('#fm','min');bind('#fo','sort');
   render();
 }
 function inRange(j){
@@ -87,7 +88,7 @@ function inRange(j){
 }
 function pass(j){
   if(f.q&&!(j.title+' '+j.company).toLowerCase().includes(f.q.toLowerCase()))return false;
-  if(f.cat&&j.category!==f.cat)return false;if(f.src&&j.source!==f.src)return false;if(f.type&&j.type!==f.type)return false;
+  if(f.cat&&j.category!==f.cat)return false;if(f.niche&&j.niche!==f.niche)return false;if(f.src&&j.source!==f.src)return false;if(f.type&&j.type!==f.type)return false;
   return (j.score||0)>=+f.min;
 }
 function counts(){
@@ -124,7 +125,7 @@ function card(j){
    <div class="score"><b>${j.score||0}%</b><span>${band(j.score||0)}</span></div></div>
    <div class="meta">${h!=null&&h<=24?'<span class="badge">New: under 24h</span>':''}
     ${j.verification!=='confirmed'?'<span class="badge w">Needs verification</span>':''}
-    <span>${esc(dateLbl)}</span><span>Source: ${esc(j.source)}</span><span>${j.remote==='confirmed'?'Fully remote':'Remote status unverified'}</span>
+    <span>${esc(dateLbl)}</span><span>Niche: ${esc(j.niche||'Not classified')}</span><span>Source: ${esc(j.source)}</span><span>${j.remote==='confirmed'?'Fully remote':'Remote status unverified'}</span>
     <span>Eligible: ${esc(j.eligible_location)}</span><span>Languages: ${esc(j.languages)}</span>
     ${j.salary?'<span>'+esc(j.salary)+'</span>':''}${j.type?'<span>'+esc(j.type)+'</span>':''}</div>
    <p>${esc(j.summary)}</p>
