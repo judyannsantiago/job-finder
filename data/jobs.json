@@ -1,8 +1,8 @@
 {
  "sample": false,
- "generated_at": "2026-11-14T01:56:23.650Z",
+ "generated_at": "2026-11-14T04:16:30.664Z",
  "new_ids": [
-  "0f179d2073"
+  "fe787d8447"
  ],
  "sources": {
   "remotive": {
@@ -32,6 +32,7 @@
    "title": "Remote Office Assistant",
    "company": "Coalition Technologies ",
    "category": "Administrative Support",
+   "niche": "Finance and Bookkeeping",
    "source": "Remotive",
    "published_at": "2026-11-11T20:17:48.000Z",
    "date_type": "published",
@@ -96,6 +97,7 @@
    "title": "Bookkeeper &amp; Admin Support Specialist - Dayshift Remote",
    "company": "D2B",
    "category": "Customer Service and Support",
+   "niche": "Finance and Bookkeeping",
    "source": "We Work Remotely",
    "published_at": "2026-11-11T17:00:39.000Z",
    "date_type": "published",
@@ -150,6 +152,7 @@
    "title": "HIL Support Specialist",
    "company": "Extend Your Team",
    "category": "Customer Service and Support",
+   "niche": "Home Services and Field Operations",
    "source": "Remote OK",
    "published_at": "2026-11-09T16:00:20.000Z",
    "date_type": "published",
@@ -182,6 +185,7 @@
    "title": "Entry Level Scheduling &amp; Coordinating Reservations Online",
    "company": "Destination Careers",
    "category": "Scheduling and Coordination",
+   "niche": "Travel, Hospitality and Rentals",
    "source": "Remote OK",
    "published_at": "2026-11-04T00:00:06.000Z",
    "date_type": "published",
@@ -210,10 +214,44 @@
    "first_seen": "2026-11-13T06:17:27.035Z"
   },
   {
+   "id": "fe787d8447",
+   "title": "Consumer Support Specialist (Weekend Shift, Sunday - Thursday)",
+   "company": "Keeper Security",
+   "category": "Customer Service and Support",
+   "niche": "Recruitment and HR",
+   "source": "We Work Remotely",
+   "published_at": "2026-10-30T07:31:10.000Z",
+   "date_type": "published",
+   "remote": "needs",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English (other languages mentioned, not required)",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 93,
+   "verification": "needs",
+   "summary": "Headquarters: Remote, US Keeper is hiring a passionate Technical Consumer Support Specialist to contribute knowledge and expertise to our B2C Support team. This is a 100% remote position from select locations (Central, Mountain or Eastern Time Zones) with an opportunity to work a hybrid schedule for…",
+   "responsibilities": [
+    "Effectively resolve user inquiries via phone, email, chat and screen sharing in an accurate and timely manner",
+    "Recognize, document, and alert management of trends in customer calls, chats or emails",
+    "Proactively identify product improvements, identify and reproduce bugs, report and escalate to management",
+    "Apply a positive and professional attitude and image for all customers and stakeholders"
+   ],
+   "qualifications": [
+    "1+ years of experience in a customer service or support role or equivalent training and certifications",
+    "Hands-on proficiency in Microsoft Office Suite and GSuite",
+    "Experience working with Smartphones, Tablets and Computers - with Mac, Android and Windows operating systems.",
+    "Must have strong typing skills - i.e. 40+ wpm"
+   ],
+   "url": "https://weworkremotely.com/remote-jobs/keeper-security-consumer-support-specialist-weekend-shift-sunday-thursday",
+   "first_seen": "2026-11-14T04:16:30.664Z"
+  },
+  {
    "id": "81cb5245b3",
    "title": "Travel Support Specialist",
    "company": "Aisles &amp; Abroad",
    "category": "Customer Service and Support",
+   "niche": "Travel, Hospitality and Rentals",
    "source": "Remote OK",
    "published_at": "2026-10-23T00:00:05.000Z",
    "date_type": "published",
@@ -246,6 +284,7 @@
    "title": "Customer Success Associate",
    "company": "Voltus",
    "category": "Customer Service and Support",
+   "niche": "General (any industry)",
    "source": "Remote OK",
    "published_at": "2026-10-16T00:00:43.000Z",
    "date_type": "published",
