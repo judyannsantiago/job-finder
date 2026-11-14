@@ -3,6 +3,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
+import { detectNiche } from './niches.mjs';
 
 const DAY = 864e5, KEEP_DAYS = 30, MIN_SCORE = 70, DATA = 'data/jobs.json';
 const UA = 'JobFinderPersonal/1.0 (personal job search tool)';
@@ -10,7 +11,11 @@ const log = (...a) => console.log(...a);
 
 // Add company boards here. The token is the name in the company's job-board address,
 // e.g. boards.greenhouse.io/examplecompany -> 'examplecompany'
-export const CONFIG = { greenhouse: [], lever: [] };
+export const CONFIG = {
+  greenhouse: [],
+  lever: ['supportninja'],            // jobs.lever.co/supportninja
+  names: { supportninja: 'SupportNinja' }, // display names for the boards above
+};
 
 // ---------- helpers ----------
 const dec = s => s.replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&amp;/g,'&');
@@ -70,8 +75,8 @@ export const connectors = {
     const out = [];
     for (const b of CONFIG.lever) { try {
       const d = await get(`https://api.lever.co/v0/postings/${b}?mode=json`);
-      for (const j of d) out.push({ source:'Company career page', title:j.text, company:b, published_at:toIso(j.createdAt), date_type:'published',
-        location:`${j.categories?.location||''} ${j.workplaceType||''}`.trim(), html:j.descriptionPlain||j.description||'', url:j.hostedUrl, remoteOnly:j.workplaceType==='remote', priority:1 });
+      for (const j of d) out.push({ source:'Company career page', title:j.text, company:(CONFIG.names||{})[b]||b, published_at:toIso(j.createdAt), date_type:'published',
+        location:`${j.categories?.location||''} ${j.workplaceType||''}`.trim(), html:[j.descriptionPlain||j.description||'', ...(j.lists||[]).map(l => `${l.text}\n${l.content}`), j.additionalPlain||''].join('\n'), url:j.hostedUrl, remoteOnly:j.workplaceType==='remote', priority:1 });
     } catch (e) { log(`lever ${b}: ${e.message}`); } }
     return out;
   },
@@ -108,7 +113,6 @@ function locationState(field, text) { // 'pass' | 'fail' | 'unknown'
   if (/philippines/i.test(text)) return 'pass';
   return 'unknown';
 }
-// Skills are about the kind of work, not specific software. A job is never marked down for asking for a tool you have not used.
 const SKILLS = ['customer','email','chat','phone','ticket','crm','helpdesk','billing','refund','subscription','escalat','vendor','work order','scheduling','calendar','dispatch','data entry','documentation','back office','invoice','onboarding','inbox','coordinat','reporting','records'];
 export function score(title, text, loc) {
   const t = title.toLowerCase(), x = text.toLowerCase(); let s = 55;
@@ -141,20 +145,23 @@ export function evaluate(raw, now = Date.now()) {
   const category = (CATS.find(([, re]) => re.test(title)) || [])[0]; if (!category) return null;
   const text = textOf(raw.html);
   const cleaned = text.replace(/\b(no|not|never|without)\b[^.\n]{0,25}?(on-?site|in[- ]office|hybrid)/gi, '');
-  if (BAD_REMOTE.test(cleaned) || BAD_REMOTE.test(`${title} ${raw.location}`)) return null;      // hybrid / onsite
+  // 'hybrid' or office attendance in the title/location, or clear office days in the text -> drop.
+  // A bare mention of the word 'hybrid' in the text only -> keep, but send to Needs verification.
+  const hybridMention = /hybrid/i.test(cleaned) && !BAD_REMOTE.test(cleaned.replace(/hybrid/gi, ''));
+  if (BAD_REMOTE.test(`${title} ${raw.location}`) || (BAD_REMOTE.test(cleaned) && !hybridMention)) return null;
   if (langRequired(text)) return null;                                                          // other language required
   const loc = locationState(raw.location, text); if (loc === 'fail') return null;               // restricted to another country
   const published = raw.published_at ? new Date(raw.published_at).getTime() : null;
   if (published && (now - published) / DAY > KEEP_DAYS) return null;
   const sc = score(title, `${raw.location} ${text}`, loc); if (sc < MIN_SCORE) return null;
-  const remoteOk = raw.remoteOnly || /\bremote\b/i.test(raw.location || '');
+  const remoteOk = !hybridMention && (raw.remoteOnly || (/\bremote\b|work from home|\bwfh\b|home[- ]?based/i.test(raw.location || '') && !/[\/;|]/.test(raw.location || '')));
   const confirmed = remoteOk && loc === 'pass' && published != null;
   const { resp, qual } = sections(text);
   const sal = raw.salary || '';
   const nums = [...sal.matchAll(/(\d[\d,.]*)\s*(k)?/gi)].map(m => parseFloat(m[1].replace(/,/g, '')) * (m[2] ? 1000 : 1)).filter(Boolean);
   const mentioned = (text.match(LANG_RE) || [])[0];
   return {
-    id: keyOf(raw), title, company: raw.company || 'Not stated', category, source: raw.source,
+    id: keyOf(raw), title, company: raw.company || 'Not stated', category, niche: detectNiche(title, text), source: raw.source,
     published_at: published ? new Date(Math.min(published, now)).toISOString() : null, date_type: raw.date_type,
     remote: remoteOk ? 'confirmed' : 'needs',
     eligible_location: loc === 'pass' ? (/philippines/i.test(`${raw.location} ${text}`) ? 'Philippines' : (raw.location || 'Worldwide')) : 'Not stated',
