@@ -1,19 +1,13 @@
 {
  "sample": false,
- "generated_at": "2026-11-13T06:17:27.035Z",
+ "generated_at": "2026-11-14T01:56:23.650Z",
  "new_ids": [
-  "662ed0a794",
-  "67d7e51c64",
-  "e50563d66d",
-  "2aeba73167",
-  "b10bf2a6c8",
-  "81cb5245b3",
-  "919f962234"
+  "0f179d2073"
  ],
  "sources": {
   "remotive": {
    "ok": true,
-   "fetched": 56
+   "fetched": 64
   },
   "wwr": {
    "ok": true,
@@ -21,7 +15,7 @@
   },
   "remoteok": {
    "ok": true,
-   "fetched": 98
+   "fetched": 97
   },
   "greenhouse": {
    "ok": true,
@@ -33,6 +27,38 @@
   }
  },
  "jobs": [
+  {
+   "id": "0f179d2073",
+   "title": "Remote Office Assistant",
+   "company": "Coalition Technologies ",
+   "category": "Administrative Support",
+   "source": "Remotive",
+   "published_at": "2026-11-11T20:17:48.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Worldwide",
+   "languages": "English",
+   "salary": "$35,3k- $52k",
+   "salary_max": 353000,
+   "type": "Full-time",
+   "score": 93,
+   "verification": "confirmed",
+   "summary": "Coalition Technologies is seeking a reliable, detail-oriented, and highly organized Remote Office Assistant to support administrative, bookkeeping, billing, reporting, data entry, and internal operations tasks. This role is ideal for someone with strong communication skills, discretion, attention to…",
+   "responsibilities": [
+    "Answering phones and emails",
+    "Completing entry-level bookkeeping tasks, including recording expenses, organizing receipts, and maintaining transaction records",
+    "Resolving billing issues with clients and internal team members",
+    "Providing account access, usage reports, data analysis, and other ad hoc support for team members"
+   ],
+   "qualifications": [
+    "The ideal candidate will have:",
+    "Willingness to learn, grow, and collaborate with the team and company as a whole",
+    "Excellent verbal and written communication skills",
+    "High level of discretion, ethics, and trustworthiness"
+   ],
+   "url": "https://remotive.com/remote-jobs/marketing/remote-office-assistant-1680495",
+   "first_seen": "2026-11-14T01:56:23.650Z"
+  },
   {
    "id": "662ed0a794",
    "title": "Part-Time Data Entry Specialist",
