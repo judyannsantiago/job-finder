@@ -1,9 +1,7 @@
 {
  "sample": false,
- "generated_at": "2026-11-14T04:16:30.664Z",
- "new_ids": [
-  "fe787d8447"
- ],
+ "generated_at": "2026-11-15T01:28:56.830Z",
+ "new_ids": [],
  "sources": {
   "remotive": {
    "ok": true,
@@ -277,29 +275,6 @@
     "Ability to work independently in a remote environment"
    ],
    "url": "https://remoteOK.com/remote-jobs/remote-travel-support-specialist-aisles-amp-abroad-1137559",
-   "first_seen": "2026-11-13T06:17:27.035Z"
-  },
-  {
-   "id": "919f962234",
-   "title": "Customer Success Associate",
-   "company": "Voltus",
-   "category": "Customer Service and Support",
-   "niche": "General (any industry)",
-   "source": "Remote OK",
-   "published_at": "2026-10-16T00:00:43.000Z",
-   "date_type": "published",
-   "remote": "confirmed",
-   "eligible_location": "Not stated",
-   "languages": "English",
-   "salary": null,
-   "salary_max": 0,
-   "type": null,
-   "score": 74,
-   "verification": "needs",
-   "summary": "Voltus represents the potential of us to better manage energy through simple, cost and risk-free demand response programs. Our commercial and industrial customers earn cash by letting us maximize the value of their operational flexibility in energy markets. We hire people who are bright, gritty, and…",
-   "responsibilities": [],
-   "qualifications": [],
-   "url": "https://remoteOK.com/remote-jobs/remote-customer-success-associate-voltus-1137529",
    "first_seen": "2026-11-13T06:17:27.035Z"
   }
  ]
