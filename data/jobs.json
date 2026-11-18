@@ -1,11 +1,11 @@
 {
  "sample": false,
- "generated_at": "2026-11-17T04:17:54.065Z",
+ "generated_at": "2026-11-18T03:16:56.340Z",
  "new_ids": [],
  "sources": {
   "remotive": {
    "ok": true,
-   "fetched": 68
+   "fetched": 64
   },
   "wwr": {
    "ok": true,
