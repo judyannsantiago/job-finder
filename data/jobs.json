@@ -1,11 +1,13 @@
 {
  "sample": false,
- "generated_at": "2026-11-19T02:54:37.167Z",
- "new_ids": [],
+ "generated_at": "2026-11-20T02:48:45.805Z",
+ "new_ids": [
+  "85b243d9ab"
+ ],
  "sources": {
   "remotive": {
    "ok": true,
-   "fetched": 64
+   "fetched": 60
   },
   "wwr": {
    "ok": true,
@@ -25,6 +27,34 @@
   }
  },
  "jobs": [
+  {
+   "id": "85b243d9ab",
+   "title": "Contract Operations Associate",
+   "company": "Elation Health",
+   "category": "Operations Support",
+   "niche": "Healthcare and Medical",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-19T18:31:14.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 93,
+   "verification": "confirmed",
+   "summary": "Headquarters: US - Remote Our team is committed to enhancing physician and patient quality of life through Elation, a SaaS cloud-based clinical platform. Since inception, we've been focused on building a world-class technology solution that creates an experience of delight and ease for physicians, a…",
+   "responsibilities": [
+    "Contract Review & Verification",
+    "Own a daily review queue of signed deals awaiting final approval, starting with new customer agreements, downgrades, and simple add-ons (adding a product or sea",
+    "Confirm the signed order form is complete: both the customer and Elation have signed and dated it, and you identify the official execution date.",
+    "Check that key dates line up across the order form, the Salesforce opportunity, and the quote (execution date, close date, and contract start date), and that ad"
+   ],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/elation-health-contract-operations-associate",
+   "first_seen": "2026-11-20T02:48:45.805Z"
+  },
   {
    "id": "0f179d2073",
    "title": "Remote Office Assistant",
