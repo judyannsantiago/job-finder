@@ -1,21 +1,19 @@
 {
  "sample": false,
- "generated_at": "2026-11-20T02:48:45.805Z",
- "new_ids": [
-  "85b243d9ab"
- ],
+ "generated_at": "2026-11-21T02:57:11.679Z",
+ "new_ids": [],
  "sources": {
   "remotive": {
    "ok": true,
-   "fetched": 60
+   "fetched": 64
   },
   "wwr": {
    "ok": true,
-   "fetched": 93
+   "fetched": 97
   },
   "remoteok": {
    "ok": true,
-   "fetched": 97
+   "fetched": 98
   },
   "greenhouse": {
    "ok": true,
