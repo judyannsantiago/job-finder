@@ -1,7 +1,9 @@
 {
  "sample": false,
- "generated_at": "2026-11-21T02:57:11.679Z",
- "new_ids": [],
+ "generated_at": "2026-11-22T01:51:45.679Z",
+ "new_ids": [
+  "03fd768252"
+ ],
  "sources": {
   "remotive": {
    "ok": true,
@@ -9,11 +11,11 @@
   },
   "wwr": {
    "ok": true,
-   "fetched": 97
+   "fetched": 100
   },
   "remoteok": {
    "ok": true,
-   "fetched": 98
+   "fetched": 100
   },
   "greenhouse": {
    "ok": true,
@@ -25,6 +27,34 @@
   }
  },
  "jobs": [
+  {
+   "id": "03fd768252",
+   "title": "Junior Finance &amp; Billing Associate",
+   "company": "Ledgy",
+   "category": "Customer Service and Support",
+   "niche": "Finance and Bookkeeping",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-21T18:31:36.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English (other languages mentioned, not required)",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 93,
+   "verification": "confirmed",
+   "summary": "Headquarters: Germany (Remote); London, United Kingdom; Poland (Remote); Romania (Remote); Spain (Remote) At Ledgy, we’re on a mission to make Europe a powerhouse of entrepreneurship by building a modern, tech-driven equity management and financial reporting platform for private and public companies…",
+   "responsibilities": [
+    "Billing operations",
+    "Own the full billing cycle end to end: set up subscriptions, coordinate invoices and credit note issuing, and manage renewals on time and accurately through our",
+    "Make sure billing data, contracts and invoicing terms are kept in sync with tools used by Sales and Customer Success",
+    "Follow up on open receivables, reconcile incoming payments and coordinate dunning"
+   ],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/ledgy-junior-finance-billing-associate",
+   "first_seen": "2026-11-22T01:51:45.679Z"
+  },
   {
    "id": "85b243d9ab",
    "title": "Contract Operations Associate",
@@ -271,39 +301,6 @@
    ],
    "url": "https://weworkremotely.com/remote-jobs/keeper-security-consumer-support-specialist-weekend-shift-sunday-thursday",
    "first_seen": "2026-11-14T04:16:30.664Z"
-  },
-  {
-   "id": "81cb5245b3",
-   "title": "Travel Support Specialist",
-   "company": "Aisles &amp; Abroad",
-   "category": "Customer Service and Support",
-   "niche": "Travel, Hospitality and Rentals",
-   "source": "Remote OK",
-   "published_at": "2026-10-23T00:00:05.000Z",
-   "date_type": "published",
-   "remote": "confirmed",
-   "eligible_location": "Not stated",
-   "languages": "English",
-   "salary": null,
-   "salary_max": 0,
-   "type": null,
-   "score": 77,
-   "verification": "needs",
-   "summary": "Position Overview We are seeking dependable and customer-focused individuals to join our team as a Travel Support Specialist. This remote role focuses on assisting clients with travel-related inquiries, supporting reservation coordination, and ensuring a smooth and positive customer experience throu…",
-   "responsibilities": [
-    "Respond to client inquiries regarding travel options, reservations, and itinerary details",
-    "Assist with coordinating and confirming bookings for hotels, cruises, and vacation packages",
-    "Review travel information for accuracy, including dates, traveler details, and accommodations",
-    "Provide timely updates and clear communication before and after travel"
-   ],
-   "qualifications": [
-    "Strong written and verbal communication skills",
-    "Customer-focused mindset with attention to detail",
-    "Comfortable using online systems and digital platforms",
-    "Ability to work independently in a remote environment"
-   ],
-   "url": "https://remoteOK.com/remote-jobs/remote-travel-support-specialist-aisles-amp-abroad-1137559",
-   "first_seen": "2026-11-13T06:17:27.035Z"
   }
  ]
 }
