@@ -1,8 +1,9 @@
 {
  "sample": false,
- "generated_at": "2026-11-22T01:51:45.679Z",
+ "generated_at": "2026-11-23T02:08:30.032Z",
  "new_ids": [
-  "03fd768252"
+  "a81457eedb",
+  "6aa93d4bcd"
  ],
  "sources": {
   "remotive": {
@@ -27,6 +28,62 @@
   }
  },
  "jobs": [
+  {
+   "id": "a81457eedb",
+   "title": "Customer Success Manager",
+   "company": "Keeper Security",
+   "category": "Customer Service and Support",
+   "niche": "Recruitment and HR",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-22T18:31:46.000Z",
+   "date_type": "published",
+   "remote": "needs",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 75,
+   "verification": "needs",
+   "summary": "Headquarters: Remote, US Description Keeper is hiring driven Customer Success Managers to join a high producing team within our B2B sales division. This can be a 100% remote position from select locations with an opportunity to work a hybrid schedule for candidates based in the Chicago, IL metro are…",
+   "responsibilities": [],
+   "qualifications": [
+    "1+ years of experience in Account Management or SaaS Customer Success roles/Sales roles",
+    "Strong technical knowledge as it pertains to software integrations (SSO, Directory etc), implementation, onboarding & support",
+    "Motivated by solving problems for customers; demonstrated ability to anticipate challenges before they arise",
+    "Experience working with and selling to Enterprise organizations, C-level Executives, IT and Cyber Security Executives"
+   ],
+   "url": "https://weworkremotely.com/remote-jobs/keeper-security-customer-success-manager",
+   "first_seen": "2026-11-23T02:08:30.032Z"
+  },
+  {
+   "id": "6aa93d4bcd",
+   "title": "Digital Adoption &amp; Lifecycle Manager (Customer Success)",
+   "company": "Mixpanel",
+   "category": "Customer Service and Support",
+   "niche": "Healthcare and Medical",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-22T18:31:46.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 75,
+   "verification": "confirmed",
+   "summary": "Headquarters: New York City, US (Remote) About Mixpanel Mixpanel is the leading product intelligence and analytics platform, trusted by more than 29,000 companies to help understand how people use the products they build. By combining powerful analytics with AI that knows your business, Mixpanel hel…",
+   "responsibilities": [
+    "Build the lifecycle communication program end-to-end across onboarding, adoption, retention, and expansion, from strategy through copy, build, launch, and itera",
+    "Create programs that serve the full customer base while working hardest for digital-only customers, and decide where messaging should differ for accounts with a",
+    "Design behavior-based segmentation using product usage, health signals, lifecycle stage, and account attributes; define the triggers that decide who hears from ",
+    "Write clear, useful customer-facing copy across email, in-product messaging, and other digital channels that reflects Mixpanel's voice and gives customers a rea"
+   ],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/mixpanel-digital-adoption-lifecycle-manager-customer-success",
+   "first_seen": "2026-11-23T02:08:30.032Z"
+  },
   {
    "id": "03fd768252",
    "title": "Junior Finance &amp; Billing Associate",
