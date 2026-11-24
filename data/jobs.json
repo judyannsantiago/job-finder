@@ -1,14 +1,16 @@
 {
  "sample": false,
- "generated_at": "2026-11-23T02:08:30.032Z",
+ "generated_at": "2026-11-24T05:42:37.007Z",
  "new_ids": [
-  "a81457eedb",
-  "6aa93d4bcd"
+  "9a54b64cc1",
+  "acf0778986",
+  "e75c3e8d4b",
+  "135f68f0fd"
  ],
  "sources": {
   "remotive": {
    "ok": true,
-   "fetched": 64
+   "fetched": 60
   },
   "wwr": {
    "ok": true,
@@ -28,6 +30,113 @@
   }
  },
  "jobs": [
+  {
+   "id": "9a54b64cc1",
+   "title": "Technical Support Specialist",
+   "company": "Elation Health",
+   "category": "Customer Service and Support",
+   "niche": "Tech and SaaS Support",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-23T18:31:03.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 82,
+   "verification": "confirmed",
+   "summary": "Headquarters: Canada - Remote Our team is committed to enhancing physician and patient quality of life through Elation, a SaaS cloud-based clinical platform. Since inception, we've been focused on building a delightful, world-class experience that empowers physicians to deliver phenomenal care to pa…",
+   "responsibilities": [
+    "Use Good Judgment to Solve Cases. Own customer escalations with cases that genuinely require seasoned judgment, the ones AI can't safely close. Build and protec",
+    "Build and own AI quality. Configure AI within Elation's stack (intents, knowledge sources, escalation rules), build lightweight external automations, and own th",
+    "Synthesize and partner with Product/Eng. Produce formal weekly and monthly insights, participate in roadmap conversations with Product Development teams, and me",
+    "What success looks like in your first 6 months"
+   ],
+   "qualifications": [
+    "0-4+ years of relevant experience inSupport, Implementation, CS Ops, embedded data analyst, or AI/automation tinkerer in any field.",
+    "A concrete portfolio of things you've built or shipped: prompt-engineered systems, dashboards, automations — with evidence of outcomes",
+    "Strong customer-facing communication and trust-building skills",
+    "Pattern recognition and synthesis muscle"
+   ],
+   "url": "https://weworkremotely.com/remote-jobs/elation-health-technical-support-specialist",
+   "first_seen": "2026-11-24T05:42:37.007Z"
+  },
+  {
+   "id": "acf0778986",
+   "title": "Medical Virtual Assistant - Reception &amp; Bookkeeping",
+   "company": "D2B",
+   "category": "Administrative Support",
+   "niche": "Healthcare and Medical",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-23T17:01:11.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Philippines",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 100,
+   "verification": "confirmed",
+   "summary": "Headquarters: Manila, Metro Manila, Philippines URL: https://jobs.workable.com/company/dcaVtKQqXr9FwBNppNCBH9/jobs-at-d2b Position: MEDICAL VIRTUAL ASSISTANT – RECEPTION & BOOKKEEPING Client Industry: Healthcare – Medical Aesthetics & Cosmetic Medicine Salary range: Php 50,000/month (The final amoun…",
+   "responsibilities": [
+    "Handle incoming calls and provide professional and courteous assistance to patients.",
+    "Respond to general patient enquiries regarding appointments, services, booking procedures, and payment arrangements.",
+    "Manage appointment bookings, confirmations, rescheduling, and cancellations.",
+    "Send appointment reminders and follow-up communications."
+   ],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/d2b-medical-virtual-assistant-reception-bookkeeping",
+   "first_seen": "2026-11-24T05:42:37.007Z"
+  },
+  {
+   "id": "e75c3e8d4b",
+   "title": "Customer Support - Resolution &amp; Outbound Retention Specialist (Voice)",
+   "company": "UMAEZ LLC",
+   "category": "Customer Service and Support",
+   "niche": "E-commerce",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-23T17:00:23.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Asia Only",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 93,
+   "verification": "confirmed",
+   "summary": "Headquarters: Indonesia URL: https://jobs.workable.com/company/hS1Fg6yA2YGb3vBeEZy9fP/jobs-at-umaez-llc About US We are a 7-8 figure direct-to-consumer (DTC) brand portfolio operating across the US and international markets, led by our flagship brand GODA. We build and scale high-demand beauty, frag…",
+   "responsibilities": [],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/umaez-llc-customer-support-resolution-outbound-retention-specialist-voice",
+   "first_seen": "2026-11-24T05:42:37.007Z"
+  },
+  {
+   "id": "135f68f0fd",
+   "title": "Customer Success Executive (APAC &amp; Middle East)",
+   "company": "Alliants Limited",
+   "category": "Customer Service and Support",
+   "niche": "Travel, Hospitality and Rentals",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-23T17:00:20.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Asia Only",
+   "languages": "English (other languages mentioned, not required)",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Contract",
+   "score": 83,
+   "verification": "confirmed",
+   "summary": "Headquarters: Singapore, Singapore URL: https://alliants.com Our hotel partners across Asia are mid-shift while our UK team sleeps — and we're looking for a Customer Success Associate to be the in-region contact who picks up their questions and issues in their own time zone. The role at a glance• Ti…",
+   "responsibilities": [],
+   "qualifications": [],
+   "url": "https://weworkremotely.com/remote-jobs/alliants-limited-customer-success-executive-apac-middle-east",
+   "first_seen": "2026-11-24T05:42:37.007Z"
+  },
   {
    "id": "a81457eedb",
    "title": "Customer Success Manager",
