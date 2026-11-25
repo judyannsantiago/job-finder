@@ -1,11 +1,8 @@
 {
  "sample": false,
- "generated_at": "2026-11-24T05:42:37.007Z",
+ "generated_at": "2026-11-25T04:45:05.551Z",
  "new_ids": [
-  "9a54b64cc1",
-  "acf0778986",
-  "e75c3e8d4b",
-  "135f68f0fd"
+  "fafa410054"
  ],
  "sources": {
   "remotive": {
@@ -30,6 +27,39 @@
   }
  },
  "jobs": [
+  {
+   "id": "fafa410054",
+   "title": "Real Estate Executive Assistant 21370",
+   "company": "Wing Assistant",
+   "category": "Administrative Support",
+   "niche": "Real Estate and Property",
+   "source": "Remote OK",
+   "published_at": "2026-11-24T00:00:20.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Philippines",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": null,
+   "score": 100,
+   "verification": "confirmed",
+   "summary": "Please whitelist the domains \"lever.co\" and \"hire.lever.co\" with your email provider to make sure you get our emails. Disclaimer: This is a generic job description for the position stated below. Actual tasks and tools will be discussed further when you reach the final interview stage. Please ensure …",
+   "responsibilities": [
+    "Persistent follow-ups with property owners, city officials (permits, parking), tenants, brokers, lawyers, and vendors â owning tasks from instruction through ",
+    "Making calls and emails on the client's behalf using provided scripts (e.g., staying on top of a utility company's major accounts team until a call is scheduled",
+    "Coordinating site visits, tenant move-ins, and vendor scheduling without requiring the client's direct involvement",
+    "Invoice processing: verifying photo documentation, flagging unusual recurring charges and investigating the reason, gathering W9s and proof for one-time invoice"
+   ],
+   "qualifications": [
+    "Real estate background is preferred (not strictly required), with familiarity in property management, vendor coordination, and administrative tasks.",
+    "Ability to independently handle follow-ups, coordinate site visits, communicate with tenants, vendors, brokers, lawyers, and city officials.",
+    "Can process invoices and prepare them for the clients approval.",
+    "Must be AI-literate to work with existing task-tracking tools."
+   ],
+   "url": "https://remoteOK.com/remote-jobs/remote-real-estate-executive-assistant-21370-wing-assistant-1138078",
+   "first_seen": "2026-11-25T04:45:05.551Z"
+  },
   {
    "id": "9a54b64cc1",
    "title": "Technical Support Specialist",
