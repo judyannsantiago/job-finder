@@ -1,13 +1,13 @@
 {
  "sample": false,
- "generated_at": "2026-11-25T04:45:05.551Z",
+ "generated_at": "2026-11-26T03:53:59.695Z",
  "new_ids": [
-  "fafa410054"
+  "e1e2b74a09"
  ],
  "sources": {
   "remotive": {
    "ok": true,
-   "fetched": 60
+   "fetched": 64
   },
   "wwr": {
    "ok": true,
@@ -27,6 +27,39 @@
   }
  },
  "jobs": [
+  {
+   "id": "e1e2b74a09",
+   "title": "Executive Assistant",
+   "company": "LaunchDarkly",
+   "category": "Administrative Support",
+   "niche": "Logistics, Procurement and Vendors",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-25T06:02:45.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 88,
+   "verification": "confirmed",
+   "summary": "Headquarters: Remote - US About the Job: LaunchDarkly is seeking an Executive Assistant to partner closely with our Chief Revenue Officer and support the broader global Revenue organization as it scales. This role will help the CRO stay focused on the highest-priority work by managing their calendar…",
+   "responsibilities": [
+    "Manage the CRO’s calendar, priorities, meeting flow, and time allocation across a globally distributed organization.",
+    "Triage scheduling requests and prepare the CRO for key meetings by confirming logistics, participants, and materials; recommend what should be delegated, deferr",
+    "Manage domestic and international travel, bookings, logistics, expenses, approvals, and last-minute changes.",
+    "Plan and coordinate Revenue leadership offsites, including quarterly gatherings, and other executive events; attend select events in person."
+   ],
+   "qualifications": [
+    "Experience as an Executive Assistant, Executive Business Partner, or comparable role supporting senior or C-level executives in a globally distributed organizat",
+    "Experience working in a software or technology company; high-growth or B2B SaaS experience is a plus.",
+    "Experience managing executive calendars, travel, expenses, complex scheduling, and meeting or event logistics.",
+    "Demonstrated ability to anticipate problems, protect executive focus, and make sound decisions about competing priorities."
+   ],
+   "url": "https://weworkremotely.com/remote-jobs/launchdarkly-executive-assistant",
+   "first_seen": "2026-11-26T03:53:59.695Z"
+  },
   {
    "id": "fafa410054",
    "title": "Real Estate Executive Assistant 21370",
