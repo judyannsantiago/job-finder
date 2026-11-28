@@ -1,11 +1,14 @@
 {
  "sample": false,
- "generated_at": "2026-11-27T03:54:59.231Z",
- "new_ids": [],
+ "generated_at": "2026-11-28T03:41:24.645Z",
+ "new_ids": [
+  "b0619223e0",
+  "fcdfa35d9d"
+ ],
  "sources": {
   "remotive": {
    "ok": true,
-   "fetched": 64
+   "fetched": 68
   },
   "wwr": {
    "ok": true,
@@ -25,6 +28,72 @@
   }
  },
  "jobs": [
+  {
+   "id": "b0619223e0",
+   "title": "Technical Customer Support Specialist",
+   "company": "ElevenLabs",
+   "category": "Customer Service and Support",
+   "niche": "Tech and SaaS Support",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-27T19:20:41.000Z",
+   "date_type": "published",
+   "remote": "confirmed",
+   "eligible_location": "Asia Only",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 82,
+   "verification": "confirmed",
+   "summary": "Headquarters: Japan Technical Customer Support Specialist (Contract, Remote) Who we are A global team united by curiosity and a shared mission: to be the first choice for AI audio. We're building a new category of technology from the ground up — moving fast, holding ourselves to a high bar, and givi…",
+   "responsibilities": [
+    "Own enterprise support end-to-end — diagnose complex issues quickly, communicate clearly, and follow through until resolved",
+    "Provide high-quality technical support in English",
+    "Become a deep expert in ElevenAgents and how our customers use it to orchestrate LLMs, telephony, and other AI integrations",
+    "Identify patterns across support tickets and surface product gaps to engineering and product teams"
+   ],
+   "qualifications": [
+    "Passionate about AI and the problems it can solve — you follow the space closely and have opinions about it",
+    "Analytically sharp with a first-principles approach to debugging and problem-solving",
+    "A strong communicator who can translate technical complexity into clear, actionable responses",
+    "Self-directed: you don't wait to be told what to do, and you hold yourself to a high standard"
+   ],
+   "url": "https://weworkremotely.com/remote-jobs/elevenlabs-technical-customer-support-specialist",
+   "first_seen": "2026-11-28T03:41:24.645Z"
+  },
+  {
+   "id": "fcdfa35d9d",
+   "title": "Executive Assistant 3",
+   "company": "Twilio",
+   "category": "Administrative Support",
+   "niche": "Travel, Hospitality and Rentals",
+   "source": "We Work Remotely",
+   "published_at": "2026-11-27T18:32:30.000Z",
+   "date_type": "published",
+   "remote": "needs",
+   "eligible_location": "Anywhere in the World",
+   "languages": "English",
+   "salary": null,
+   "salary_max": 0,
+   "type": "Full-Time",
+   "score": 78,
+   "verification": "needs",
+   "summary": "Headquarters: Remote - Colombia Who we are At Twilio, we’re shaping the future of communications, all from the comfort of our homes. We deliver innovative solutions to hundreds of thousands of businesses and empower millions of developers worldwide to craft personalized customer experiences. Our ded…",
+   "responsibilities": [
+    "In this role, you’ll:",
+    "Develop a deep understanding of the Enterprise Technology organization, including its strategy, priorities, key initiatives, stakeholders, and operating rhythms",
+    "Serve as a trusted thought partner to executives, providing informed input, identifying potential risks or conflicts, and helping move priorities forward withou",
+    "Strategically manage complex executive calendars by evaluating and prioritizing requests, resolving conflicts, protecting time for critical work, and redirectin"
+   ],
+   "qualifications": [
+    "Twilio values diverse experiences from all kinds of industries, and we encourage everyone who meets the required qualifications to apply. If your career is just",
+    "Required:",
+    "5+ years of experience supporting senior executives in a fast-paced, dynamic environment, preferably within the technology industry.",
+    "Demonstrated ability to take ownership, operate independently, and move work forward amid ambiguity, incomplete information, and changing priorities."
+   ],
+   "url": "https://weworkremotely.com/remote-jobs/twilio-executive-assistant-3",
+   "first_seen": "2026-11-28T03:41:24.645Z"
+  },
   {
    "id": "e1e2b74a09",
    "title": "Executive Assistant",
